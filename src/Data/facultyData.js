@@ -1,6 +1,21 @@
 const facultyMembers = [
     // Computer Science
-    { id: 1, name: "Dr. John Doe", department: "Computer Science", image: "/images/faculty/john.jpg", title: "Professor" },
+    {
+        id: 1,
+        name: "Dr. John Doe",
+        department: "Computer Science",
+        image: "/images/faculty/john.jpg",
+        cabin: "D-302",
+        availability: false,  // true if available, false if not
+        timetable: [
+            { day: 'Monday', time: '9:00 AM - 11:00 AM', subject: 'Introduction to CS' },
+            { day: 'Tuesday', time: '10:00 AM - 12:00 PM', subject: 'Data Structures' },
+            // more schedule entries...
+        ],
+        bio: "Dr. John Doe has a Ph.D. in Computer Science focusing on artificial intelligence and machine learning. He has published over 30 papers in prestigious journals.",
+        block: "D",
+        officeImg: "/images/offices/D-302.jpg"
+    },
     { id: 2, name: "Dr. Emily White", department: "Computer Science", image: "/images/faculty/emily.jpg", title: "Senior Lecturer" },
     { id: 3, name: "Dr. Alice Johnson", department: "Computer Science", image: "/images/faculty/alice.jpg", title: "Assistant Professor" },
     { id: 4, name: "Dr. Bob Brown", department: "Computer Science", image: "/images/faculty/bob.jpg", title: "Lecturer" },

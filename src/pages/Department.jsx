@@ -6,8 +6,8 @@ function Department() {
   const departments = [
     { id: 'A', name: 'Administrative Block', image: '/images/admin-block.jpg' },
     { id: 'B', name: 'Information Technology', image: '/images/it-block.jpg' },
-    { id: 'C', name: 'Mechanical Engineering', image: '/images/mechanical-block.jpg' },
-    { id: 'D', name: 'Electrical Engineering', image: '/images/electrical-block.jpg' },
+    { id: 'C', name: 'Electrical Engineering', image: '/images/mechanical-block.jpg' },
+    { id: 'D', name: 'Computer Science', image: '/images/electrical-block.jpg' },
     { id: 'E', name: 'Civil Engineering', image: '/images/civil-block.jpg' },
     { id: 'F', name: 'Chemical Engineering', image: '/images/chemical-block.jpg' },
     { id: 'G', name: 'Aerospace Engineering', image: '/images/aerospace-block.jpg' },
@@ -16,7 +16,7 @@ function Department() {
     { id: 'J', name: 'Nuclear Engineering', image: '/images/nuclear-block.jpg' },
     { id: 'K', name: 'Materials Science', image: '/images/materials-block.jpg' },
     { id: 'L', name: 'Robotics', image: '/images/robotics-block.jpg' },
-    { id: 'M', name: 'Applied Physics', image: '/images/physics-block.jpg' },
+    { id: 'M', name: 'Mechanical Engineering', image: '/images/physics-block.jpg' },
     { id: 'N', name: 'Mathematics and Statistics', image: '/images/math-block.jpg' },
     { id: 'Library', name: 'Central Library', image: '/images/library.jpg' }
   ];

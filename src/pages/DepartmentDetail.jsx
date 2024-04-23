@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Faculty from './department/Faculty';
+import Faculty from './department/Faculty_dept';
 import BlockInfo from './department/BlockInfo';
 import VirtualTour from './department/VirtualTour';
 

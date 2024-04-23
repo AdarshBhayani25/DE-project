@@ -6,6 +6,7 @@ import Department from './pages/Department';
 import DepartmentDetail from './pages/DepartmentDetail';
 // import Campus from './pages/Campus';
 import Faculty from './pages/Faculty';
+import FacultyProfile from './pages/FacultyProfile';
 // import AboutUs from './pages/AboutUs';
 // import Profile from './pages/Profile';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/department" element={<Department />} />
           <Route path="/department/:deptId" element={<DepartmentDetail />} />
           <Route path="/faculty" element={<Faculty />} />
+          <Route path="/faculty/:id" element={<FacultyProfile />} />
           {/* <Route path="/campus" element={<Campus />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/about" element={<AboutUs />} />
