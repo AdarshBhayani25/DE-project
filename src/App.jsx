@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Home from './pages/Home';
 import Department from './pages/Department';
 import DepartmentDetail from './pages/DepartmentDetail';
@@ -9,24 +8,23 @@ import Faculty from './pages/Faculty';
 import FacultyProfile from './pages/FacultyProfile';
 // import AboutUs from './pages/AboutUs';
 // import Profile from './pages/Profile';
+import Layout from './components/Layout';
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/department" element={<Department />} />
-          <Route path="/department/:deptId" element={<DepartmentDetail />} />
-          <Route path="/faculty" element={<Faculty />} />
-          <Route path="/faculty/:id" element={<FacultyProfile />} />
-          {/* <Route path="/campus" element={<Campus />} />
-          <Route path="/faculty" element={<Faculty />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/profile" element={<Profile />} /> */}
-        </Routes>
-      </Layout>
-    </Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="department">
+            <Route index element={<Department />} />
+            <Route path=":deptId" element={<DepartmentDetail />} />
+          </Route>
+          <Route path="faculty">
+            <Route index element={<Faculty />} />
+            <Route path=":id" element={<FacultyProfile />} />
+          </Route>
+        </Route>
+      </Routes>
   );
 }
 
