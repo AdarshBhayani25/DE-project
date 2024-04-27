@@ -24,13 +24,15 @@ function FacultyPage() {
                 {departments.map(dept => (
                     <div key={dept}>
                         <h3 className="font-bold text-lg">{dept}</h3>
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-4 gap-3">
                             {filteredFaculty.filter(faculty => faculty.department === dept).map(faculty => (
-                                <div key={faculty.id} className="p-2 border border-gray-200"
+                                <div key={faculty.id} className="p-2 border border-gray-200 flex justify-center items-center "
                                 onClick={() => navigate(`/faculty/${faculty.id}`)}>
-                                    <img src={faculty.image} alt={faculty.name} className="w-full h-32 object-cover" />
+                                    <div > 
+                                    <img src={faculty.image} alt={faculty.name} className="w-32 h-32 object-cover flex justify-center items-center " />
                                     <p className="mt-2">{faculty.name}</p>
                                     <p className="text-sm">{faculty.title}</p>
+                                    </div>
                                 </div>
                                 
                             ))}
