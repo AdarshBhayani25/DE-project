@@ -1,36 +1,12 @@
-import React from 'react';
-import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { useNavigate } from 'react-router-dom';
+import ImageSlider from './ImageSlider';
+import ThreeSections from './ThreeSections';
 import AboutUs from './AboutUs';
 
- // Import the Slider component
-
-function Home() {
-  // Settings for the slick carousel
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    adaptiveHeight: true, // Ensures all slides have equal height
-    responsive: [
-      {
-        breakpoint: 768, // Adjust as needed
-        settings: {
-          arrows: false,
-        }
-      }
-    ]
-  };
-  const navigate = useNavigate();
-
+const Home = () => {
   return (
+<<<<<<< HEAD
     <div className="max-w-4xl mx-auto px-4">
       <Slider {...settings}>
         <div className='p-4'>
@@ -68,8 +44,13 @@ function Home() {
       </div>   
       
      
+=======
+    <section className="max-w-7xl mx-auto px-4">
+      <ImageSlider />
+      <ThreeSections />
+>>>>>>> 5251807844a156efc6669168b3ed4e3e11e0e814
       <AboutUs />
-    </div>
+    </section>
   );
 }
 

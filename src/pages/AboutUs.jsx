@@ -1,7 +1,6 @@
-import React from 'react';
-import '../index.css'; // Import custom CSS
+import '../index.css';
 
-function AboutUs() {
+const AboutUs = () => {
   return (
     <section id='AboutUs'>
       <section className="about-us-section">
