@@ -31,7 +31,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="max-w-4xl mx-auto px-4">
       <Slider {...settings}>
         <div className='p-4'>
           <img src="https://images.collegedunia.com/public/college_data/images/campusimage/1563873635camppus.jpg" alt="Image 1" className="mx-auto h-auto w-full" />
@@ -47,23 +47,7 @@ function Home() {
         </div>
       </Slider>
 
-      {/* Three Columns for Faculty, College, Department */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-8">
-        {/* Department */}
-        <div className="bg-red-100 p-4 text-center rounded-lg shadow-md">
-          <Link to='/department' className="block"><h2 className="font-bold text-xl mb-2">Department</h2></Link>
-          <p className="text-gray-700">Find information on various departments, programs offered, and more.</p>
-        </div>
-        {/* Faculty */}
-        <div className="bg-blue-100 p-4 text-center rounded-lg shadow-md">
-          <Link to='/faculty' className="block"><h2 className="font-bold text-xl mb-2">Faculty</h2></Link>
-          <p className="text-gray-700">Explore details about the faculty, achievements, and more.</p>
-        </div>
-        {/* College Campus */}
-        <div className="bg-green-100 p-4 text-center rounded-lg shadow-md">
-          <Link to='/campus' className="block"><h2 className="font-bold text-xl mb-2">College Campus</h2></Link>
-          <p className="text-gray-700">Discover general information about the college, history, and mission.</p>
-
+     
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8">
         <div className="bg-blue-100 p-4 text-center shadow-md cursor-pointer"
              onClick={() => navigate('/faculty')}>
