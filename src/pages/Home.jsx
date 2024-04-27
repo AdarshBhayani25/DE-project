@@ -64,7 +64,9 @@ function Home() {
         <div className="bg-green-100 p-4 text-center rounded-lg shadow-md">
           <Link to='/campus' className="block"><h2 className="font-bold text-xl mb-2">College Campus</h2></Link>
           <p className="text-gray-700">Discover general information about the college, history, and mission.</p>
-      </div>
+         </div>
+      </div>   
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8">
         <div className="bg-blue-100 p-4 text-center shadow-md cursor-pointer"
              onClick={() => navigate('/faculty')}>
@@ -82,7 +84,7 @@ function Home() {
           <p>Information on various departments, programs offered, and more.</p>
         </div>
       </div>
-    <AboutUs />
+      <AboutUs />
     </div>
   );
 }
