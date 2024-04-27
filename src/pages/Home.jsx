@@ -67,23 +67,7 @@ function Home() {
          </div>
       </div>   
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8">
-        <div className="bg-blue-100 p-4 text-center shadow-md cursor-pointer"
-             onClick={() => navigate('/faculty')}>
-          <h2 className="font-bold text-xl">Faculty</h2>
-          <p>Details about the faculty, achievements, and more.</p>
-        </div>
-        <div className="bg-green-100 p-4 text-center shadow-md cursor-pointer"
-             onClick={() => navigate('/')}>
-          <h2 className="font-bold text-xl">College</h2>
-          <p>General information about the college, history, and mission.</p>
-        </div>
-        <div className="bg-red-100 p-4 text-center shadow-md cursor-pointer"
-             onClick={() => navigate('/department')}>
-          <h2 className="font-bold text-xl">Department</h2>
-          <p>Information on various departments, programs offered, and more.</p>
-        </div>
-      </div>
+     
       <AboutUs />
     </div>
   );
