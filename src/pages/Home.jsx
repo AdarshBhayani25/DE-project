@@ -31,7 +31,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="max-w-4xl mx-auto px-4">
       <Slider {...settings}>
         <div className='p-4'>
           <img src="https://images.collegedunia.com/public/college_data/images/campusimage/1563873635camppus.jpg" alt="Image 1" className="mx-auto h-auto w-full" />
@@ -46,6 +46,7 @@ function Home() {
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ8FQPXd8dqVBbPZEVUrERbJEjdkwTt6Tj1g&usqp=CAU" alt="Image 4" className="mx-auto h-auto w-full" />
         </div>
       </Slider>
+
 
       {/* Three Columns for Faculty, College, Department */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-8">

@@ -9,6 +9,7 @@ import FacultyProfile from './pages/FacultyProfile';
 // import AboutUs from './pages/AboutUs';
 // import Profile from './pages/Profile';
 import Layout from './components/Layout';
+import Campus from './pages/Campus';
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
           <Route path="faculty">
             <Route index element={<Faculty />} />
             <Route path=":id" element={<FacultyProfile />} />
+          </Route>
+          <Route path="campus">
+            <Route index element={<Campus />} />
+            
           </Route>
         </Route>
       </Routes>
