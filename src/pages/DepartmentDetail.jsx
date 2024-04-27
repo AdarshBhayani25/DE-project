@@ -4,24 +4,33 @@ import Faculty from './department/Faculty_dept';
 import BlockInfo from './department/BlockInfo';
 import VirtualTour from './department/VirtualTour';
 
-function DepartmentDetail() {
+function DepartmentDetail({ departments }) {
   const { deptId } = useParams();
+  const department = departments.find((dept) => dept.id.toLowerCase() === deptId.toLowerCase());
+
+  if (!department) {
+    return <div>Department not found</div>;
+  }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Block {deptId.toUpperCase()}</h1>
-      <div className="grid grid-row-3 gap-4">
-        <div className="bg-blue-100 p-4">
+    <section className="max-w-7xl mx-auto px-4 py-6">
+      <h1 className="text-3xl font-bold text-gray-800 mb-4">Block {department.id.toUpperCase()}</h1>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href={department.tour} target='_blank' className="bg-yellow-100 p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">Virtual Tour</h2>
+          <VirtualTour />
+        </a>
+        <div className="bg-blue-100 p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">Faculty</h2>
           <Faculty />
         </div>
-        <div className="bg-green-100 p-4">
+        <div className="bg-green-100 p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4">Block Info</h2>
           <BlockInfo />
         </div>
-        <div className="bg-yellow-100 p-4">
-          <VirtualTour />
-        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

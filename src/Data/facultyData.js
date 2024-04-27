@@ -2,11 +2,10 @@ const facultyMembers = [
     // Computer Science
     {
         id: 1,
-        name: "Prof. Kajal .S. Patel",
-        title: "Associate Professor",
+        name: "Dr. John Doe",
         department: "Computer Science",
-        image: "https://www.vgecg.ac.in/images/faculties/com/ksp.png",
-        cabin: "HOD Office",
+        image: "/images/faculty/john.jpg",
+        cabin: "D-302",
         availability: false,  // true if available, false if not
         timetable: [
             { day: 'Monday', time: '9:00 AM - 11:00 AM', subject: 'Introduction to CS' },
@@ -17,10 +16,10 @@ const facultyMembers = [
         block: "D",
         officeImg: "/images/offices/D-302.jpg"
     },
-    { id: 2, name: "Prof. Jalpa M. Ramavat", department: "Computer Science", image: "https://www.vgecg.ac.in/images/faculties/com/jmr.png", title: "Assistant Professor" },
-    { id: 3, name: "Prof. Nakul R. Dave", department: "Computer Science", image: "https://www.vgecg.ac.in/images/faculties/com/nrd.png", title: "Assistant Professor" },
-    { id: 4, name: "Prof. Uttam Chauhan", department: "Computer Science", image: "https://www.vgecg.ac.in/images/faculties/com/ugc.png", title: "Assistant Professor" },
-    { id: 5, name: "Prof. Amit H. Rathod", department: "Computer Science", image: "https://www.vgecg.ac.in/images/faculties/com/ar.png", title: "Assistant Professor" },
+    { id: 2, name: "Dr. Emily White", department: "Computer Science", image: "/images/faculty/emily.jpg", title: "Senior Lecturer" },
+    { id: 3, name: "Dr. Alice Johnson", department: "Computer Science", image: "/images/faculty/alice.jpg", title: "Assistant Professor" },
+    { id: 4, name: "Dr. Bob Brown", department: "Computer Science", image: "/images/faculty/bob.jpg", title: "Lecturer" },
+    { id: 5, name: "Dr. Charlie Davis", department: "Computer Science", image: "/images/faculty/charlie.jpg", title: "Professor" },
 
     // Mechanical Engineering
     { id: 6, name: "Dr. Jane Smith", department: "Mechanical Engineering", image: "/images/faculty/jane.jpg", title: "Associate Professor" },
