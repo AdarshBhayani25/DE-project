@@ -12,6 +12,7 @@ import Layout from './components/Layout';
 import AdminPage from './pages/AdminPage';
 import DepartmentPage from './pages/DepartmentPage';
 import FacultyPage from './pages/FacultyPage';
+import Campus from './pages/Campus';
 
 const App = () => {
   const departments = [
@@ -51,6 +52,7 @@ const App = () => {
             <Route index element={<Faculty />} />
             <Route path=":id" element={<FacultyProfile />} />
           </Route>
+          <Route path="campus" element={<Campus />} />
         </Route>
       </Routes>
   );
