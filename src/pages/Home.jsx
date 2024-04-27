@@ -3,7 +3,9 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from 'react-router-dom';
 import AboutUs from './AboutUs';
+
  // Import the Slider component
 
 function Home() {
@@ -26,6 +28,7 @@ function Home() {
       }
     ]
   };
+  const navigate = useNavigate();
 
   return (
     <div className="max-w-7xl mx-auto px-4">
@@ -60,6 +63,22 @@ function Home() {
         <div className="bg-green-100 p-4 text-center rounded-lg shadow-md">
           <Link to='/campus' className="block"><h2 className="font-bold text-xl mb-2">College Campus</h2></Link>
           <p className="text-gray-700">Discover general information about the college, history, and mission.</p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-8">
+        <div className="bg-blue-100 p-4 text-center shadow-md cursor-pointer"
+             onClick={() => navigate('/faculty')}>
+          <h2 className="font-bold text-xl">Faculty</h2>
+          <p>Details about the faculty, achievements, and more.</p>
+        </div>
+        <div className="bg-green-100 p-4 text-center shadow-md cursor-pointer"
+             onClick={() => navigate('/')}>
+          <h2 className="font-bold text-xl">College</h2>
+          <p>General information about the college, history, and mission.</p>
+        </div>
+        <div className="bg-red-100 p-4 text-center shadow-md cursor-pointer"
+             onClick={() => navigate('/department')}>
+          <h2 className="font-bold text-xl">Department</h2>
+          <p>Information on various departments, programs offered, and more.</p>
         </div>
       </div>
 
