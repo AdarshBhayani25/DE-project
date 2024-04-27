@@ -133,8 +133,8 @@ function FacultyProfile() {
             {/* First Row */}
             <div className="grid grid-cols-3 gap-6 mt-6">
                 {/* Faculty Image */}
-                <div className="bg-gray-100 p-4 rounded shadow">
-                    <img src={faculty.image} alt={faculty.name} className="w-full h-64 object-cover rounded" />
+                <div className="bg-gray-100 p-4 rounded shadow flex justify-center items-center">
+                    <img src={faculty.image} alt={faculty.name} className="w-64 h-64 bg-center object-cover rounded " />
                 </div>
                 {/* Faculty Information */}
                 <div className="col-span-1 bg-blue-100 p-4 rounded shadow">
