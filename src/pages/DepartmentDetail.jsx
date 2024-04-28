@@ -1,10 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Faculty from './department/Faculty_dept';
-import BlockInfo from './department/BlockInfo';
-import VirtualTour from './department/VirtualTour';
+import Faculty from '../components/Faculty_dept';
+import BlockInfo from '../components/BlockInfo';
+import VirtualTour from '../components/VirtualTour';
+import departments from '../Data/DepartmentData';
 
-function DepartmentDetail({ departments }) {
+function DepartmentDetail() {
   const { deptId } = useParams();
   const department = departments.find((dept) => dept.id.toLowerCase() === deptId.toLowerCase());
 
