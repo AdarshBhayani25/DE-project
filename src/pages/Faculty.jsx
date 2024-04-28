@@ -18,7 +18,7 @@ function FacultyPage() {
                 <input
                     type="text"
                     placeholder="Search faculty..."
-                    className="mb-4 p-2 border border-gray-300"
+                    className="mb-4 p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                     onChange={e => setSearchQuery(e.target.value)}
                 />
                 {departments.map(dept => (

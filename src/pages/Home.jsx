@@ -1,8 +1,8 @@
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import ImageSlider from './ImageSlider';
-import ThreeSections from './ThreeSections';
-import AboutUs from './AboutUs';
+import ImageSlider from '../components/ImageSlider';
+import ThreeSections from '../components/ThreeSections';
+import AboutUs from '../components/AboutUs';
 
 const Home = () => {
   return (
