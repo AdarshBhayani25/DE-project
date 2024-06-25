@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import facultyMembers from '../Data/facultyData'; // path might vary
 import { useParams } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
+
+const ROLES = {
+    'User': 2001,
+    'Editor': 1984,
+    'Admin': 5150
+  }
 
 function FacultyProfile() {
     const [faculty, setFaculty] = useState(null);
     const [isAvailable, setIsAvailable] = useState(false);
     const { id } = useParams();
+    const { auth } = useAuth();
 
-    console.log('Rendering FacultyProfile component'); 
+    // console.log('Rendering FacultyProfile component'); 
 
     useEffect(() => {
         console.log('id:', id);
@@ -21,8 +29,12 @@ function FacultyProfile() {
         }
     }, [id]);
 
+    // console.log(auth?.roles?.includes(ROLES.Admin))
+
     const toggleAvailability = () => {
-        setIsAvailable(!isAvailable);
+        if(auth?.roles?.includes(ROLES.Admin)) {
+            setIsAvailable(!isAvailable);
+        }
         // Update backend if used
     };
 
